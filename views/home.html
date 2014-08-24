@@ -32,16 +32,16 @@
   <div id="controls" >
     <button
         class="alert" ng-click="openFile()"
-        data-intro="Upload image you wish to edit."
+        data-intro="Select image you wish to edit."
         data-position="bottom">
-      <i class="fa fa-upload"></i> Upload
+      <i class="fa fa-image"></i> Open
     </button>
     <button 
         id="crop-button"
         class="alert"
         ng-click="crop()"
         ng-show="imageSrc"
-        data-intro="click crop to adjust image."
+        data-intro="Crop and Scale in one step."
         data-posistion="bottom">
       <i class="fa fa-crop"></i> Crop
     </button>
@@ -49,7 +49,7 @@
           ng-show="downloadTitle"
           download="{{downloadTitle}}"
           href="{{imageSrc}}"
-          data-intro="click download to save image."
+          data-intro="Save adjusted image."
           data-posistion="bottom">
        <i class="fa fa-download"></i> Download
      </a>
