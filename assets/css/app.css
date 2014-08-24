@@ -1,0 +1,62 @@
+body {
+  background: #eeeeee;
+  padding: 20px 40px;
+}
+
+header,
+#monitorDimensionInput,
+#controls {
+  margin-bottom: 20px;
+}
+
+header {
+  text-align: right;
+}
+
+header h2 {
+  display: inline;
+  margin-right: 50px;
+  vertical-align: top;
+}
+
+.monitor-group {
+  display: inline-block;
+  width: 150px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.red {
+  color: #f04124;
+}
+
+.monitor-group input {
+  display: inline;
+  width: 85px;
+}
+
+#blank-monitor {
+  display: inline-block;
+  vertical-align: top;
+  height: 100px;
+  width:1px;
+}
+
+#controls button,
+#controls a {
+  margin-left: 10px;
+}
+
+.tap-dismiss {
+  text-align:center;
+  width: 400px;
+  height: 100px;
+  margin-left: -200px;
+  margin-top: -50px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}

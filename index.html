@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html data-ng-app="bgCropperApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="" />
+
+        <link rel="stylesheet" href="bower_components/Jcrop/css/jquery.Jcrop.min.css" type="text/css" />
+        <link rel="stylesheet" href="bower_components/chardin.js/chardinjs.css" type="text/css" />
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+
+        <title>Background Cropper</title>
+    </head>
+    <body >
+        <header id="appHeader">
+          <!-- <a href="#/"><i class="fa fa-home fa-4x"></i></a> -->
+          <h2>Multi Monitor Background Cropper</h2>
+          <i ng-click="help()"
+              class="fa fa-question-circle fa-4x red"
+              data-intro="View this again"
+              data-position="left"></i>
+        </header>
+
+        <div data-ng-view id="container">
+        </div>
+
+        <footer id="appFooter">
+        </footer>
+
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-route/angular-route.js"></script>
+        <script src="/bower_components/Jcrop/js/jquery.Jcrop.min.js"></script>
+        <script src="/bower_components/chardin.js/chardinjs.min.js"></script>
+        <script src="/bower_components/caman/dist/caman.full.min.js"></script>
+        <script src="/bower_components/foundation/js/foundation.min.js"></script>
+
+        <script src="/assets/js/app.js"></script>
+
+        <script src="/assets/js/controllers/home.js"></script>
+
+    </body>
+</html>
+

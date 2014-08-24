@@ -1,0 +1,28 @@
+{
+  "name": "BGcropper",
+  "version": "0.0.0",
+  "authors": [
+    "Loran Briggs <loran@codesquire.com>"
+  ],
+  "description": "cropper tool",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://codequire.com/bgcropper",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.2.21",
+    "Jcrop": "~0.9.12",
+    "font-awesome": "~4.1.0",
+    "foundation": "zurb/bower-foundation#~5.3.3",
+    "chardin.js": "heelhook/chardin.js#~0.1.3",
+    "angular-route": "~1.2.21",
+    "caman": "~4.1.2"
+  }
+}
