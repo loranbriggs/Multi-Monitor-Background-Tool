@@ -121,4 +121,15 @@ angular.module('bgCropperApp').controller('Home',
         return newFilename;
       }
 
+      $scope.again = function() {
+        $location.path('/#');
+        $scope.$apply();
+      };
+
+      $scope.help = function() {
+        $('body').chardinJs('toggle');
+        $('.chardinjs-overlay').append('<div class="chardinjs-helper-layer tap-dismiss"><div class="chardinjs-tooltiptext">Once your adjusted image is downloaded, set it to your desktop background with display mode \'tile\' and your image will strech perfect across all your monitors.<br/><br/>Tap to dismiss</div></div>');
+      };
+
+
     }]);

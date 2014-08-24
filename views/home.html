@@ -1,7 +1,17 @@
 <div ng-init="init()">
+  <header id="appHeader">
+    <!-- <a href="#/"><i class="fa fa-home fa-4x"></i></a> -->
+    <h2>Multi Monitor Background Cropper</h2>
+    <i ng-click="help()"
+        class="fa fa-question-circle fa-4x red"
+        data-intro="View this again"
+        data-position="left"></i>
+  </header>
+  <h3>Monitor(s) Dimensions</h3>
+ <div id="monitor-dim-info" data-intro="Enter your Monitor(s) dimensions here" data-position="top">&nbsp;</div>
   <div id="monitorDimensionInput"
-      data-intro="Enter the dimension of your monitor(s) here."
-      data-position="bottom">
+      data-intro="Leave zeros for<br/>remaining monitors."
+      data-position="right">
     <div class="monitor-group" ng-repeat="monitor in monitors">
       <label>Width &nbsp;:
         <input class="monitor-input" type="number" ng-model="monitor.width" ng-change="sumMonitors()"/>
@@ -10,23 +20,44 @@
         <input class="monitor-input" type="number" ng-model="monitor.height" ng-change="sumMonitors()"/>
       </label>
     </div>
-    <div id="blank-monitor" data-intro="Leave Zero's for remaining monitors."
-      data-position="bottom">&nbsp;</div>
+    <div id="blank-div" >&nbsp;</div>
     <br/>
   </div>
-  <div id="controls">
-    <button class="alert" ng-click="openFile()"><i class="fa fa-upload"></i> Upload</button>
-    <button class="alert" ng-click="crop()" ng-show="imageSrc"><i class="fa fa-crop"></i> Crop</button>
+  <div id="controls" >
+    <button
+        class="alert" ng-click="openFile()"
+        data-intro="Upload image you wish to edit."
+        data-position="bottom">
+      <i class="fa fa-upload"></i> Upload
+    </button>
+    <button 
+        id="crop-button"
+        class="alert"
+        ng-click="crop()"
+        ng-show="imageSrc"
+        data-intro="click crop to adjust image."
+        data-posistion="bottom">
+      <i class="fa fa-crop"></i> Crop
+    </button>
     <a id="download-button" class="button alert"
           ng-show="downloadTitle"
           download="{{downloadTitle}}"
-          href="{{imageSrc}}">
+          href="{{imageSrc}}"
+          data-intro="click download to save image."
+          data-posistion="bottom">
        <i class="fa fa-download"></i> Download
      </a>
+     <button
+        id="again-button"
+        class="success"
+        ng-show="downloadTitle"
+        ng-click="again()">
+      <i class="fa fa-refresh"></i> Again
+    </button>
   </div>
   {{imageName}}
   <input type="file" id="file" name="file" onchange="angular.element(this).scope().fileSelect(this)" style="display:none;"/>
-  <div id="imageHolder" data-intro="When the time comes, click download and set image as background and set display mode to tile. Enjoy!" data-posistion="bottom">
+  <div id="imageHolder" >
     <img id="theImage" ng-src="{{imageSrc}}" />
   </div>
 </div>

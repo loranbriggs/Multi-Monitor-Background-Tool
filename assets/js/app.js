@@ -11,13 +11,6 @@ bgCropperApp.run(function($rootScope) {
     alert('The File APIs are not fully supported in this browser.');
   }
 
-  $rootScope.help = function() {
-    $('body').chardinJs('toggle');
-    $('.chardinjs-overlay').append('<div class="chardinjs-helper-layer tap-dismiss"><div class="chardinjs-tooltiptext">Tap to dismiss</div></div>');
-  };
-
-  //setTimeout($rootScope.help, 1500);
-
 });
 
 bgCropperApp.config(function($routeProvider) {
